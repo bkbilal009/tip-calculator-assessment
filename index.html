@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Tip Calculator</h2>
+        <input type="number" id="bill" placeholder="Bill Amount (Rs)">
+        <div id="bill-error" class="error"></div>
+
+        <div class="tips">
+            <button onclick="setTip(10)">10%</button>
+            <button onclick="setTip(15)">15%</button>
+            <button onclick="setTip(20)">20%</button>
+            <input type="number" id="custom-tip" placeholder="Custom %" oninput="setCustomTip(this.value)">
+        </div>
+
+        <input type="number" id="people" placeholder="Number of people">
+        <div id="people-error" class="error"></div>
+
+        <div class="results">
+            <p>Tip Amount: Rs <span id="tip-amount">0.00</span></p>
+            <p>Total Bill: Rs <span id="total-amount">0.00</span></p>
+            <p>Per Person: Rs <span id="per-person">0.00</span></p>
+        </div>
+        <button id="reset-btn" onclick="reset()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
